@@ -30,28 +30,7 @@ class _XpertFundingAppState extends State<XpertFundingApp> {
         appBar: AppBar(
           backgroundColor: const Color(0xFF0A0E1A),
           elevation: 0,
-          leading: const Icon(Icons.menu, color: Colors.white),
-          actions: [
-            Container(
-              margin: const EdgeInsets.only(right: 16),
-              width: 32,
-              height: 32,
-              decoration: const BoxDecoration(
-                color: Color(0xFF00C851),
-                shape: BoxShape.circle,
-              ),
-              child: const Center(
-                child: Text(
-                  'VIP',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 10,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-          ],
+          automaticallyImplyLeading: false,
         ),
         body: BlocListener<ChallengesBloc, ChallengesState>(
           listener: (context, state) {
